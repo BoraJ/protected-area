@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>KDPA | 국가보호지역 통합DB관리 시스템</title>
+    <script>
+        $(document).ready(function () {
+            $('body').css('height', $(window).height() - 100);
+            $('.aside_content').css('height', $(window).height()-150);
+
+            $(window).resize(function () {
+                $('body').css('height', $(window).height() - 100);
+                $('.aside_content').css('height', $(window).height()-150);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">              
+        <div id="aside">
+            <h1><a href="#"><img src="../img/logo.png" alt="KDPA(Korea Database on Protected Area) 국가보호지역 통합DB관리 시스템"></a></h1>
+            <ul class="menu">
+                <li class="btn01 menu01 active">상세검색</li>
+                <li class="btn01 menu02">통계분석</li>
+                <li class="btn01 menu03">시계열분석</li>
+            </ul>
+            <div id="aside_content" class="aside_content acm01_con">
+                <div class="ac_menu01">
+                    <div class="detail_search">
+                        <form>
+                            <fieldset>
+                                <legend>보호지역 상세검색</legend>
+                                <ul>
+                                    <li>
+                                        <label for="ds01">기관</label>
+                                        <select id="ds01">
+                                            <option>환경부</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label for="ds02">유형</label>
+                                        <select id="ds02">
+                                            <option>전체선택</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label for="ds03">구분</label>
+                                        <select id="ds03">
+                                            <option>육상</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label for="ds04">지역</label>
+                                        <select id="ds04" class="pre_year">
+                                            <option>1980</option> 
+                                        </select>&nbsp;&nbsp;~&nbsp; 
+                                        <select class="next_year">
+                                            <option>2016</option>
+                                        </select>
+                                       
+                                    </li>
+                                    <li>
+                                        <label for="ds05">검색어</label>
+                                        <input type="search" id="ds05">
+                                    </li>
+                                    <li>
+                                        <span class="btn05 search_btn">검색</span>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="search_result">
+                        <div class="sr_tit"><h5>검색결과 (2건)</h5></div>
+                        <ul class="sr_list">
+                            <li>
+                                <div class="sr_list_inner">
+                                    <div class="pin active"></div>
+                                    <dl>
+                                        <dt><b>설악산</b><br>(Seoraksan)</dt>
+                                        <dd class="list_text">
+                                            <ul>
+                                                <li>유형 : 국립공원</li>
+                                                <li>면적 : 육상 7,568km&sup2;·해양 3,411km&sup2;</li>
+                                            </ul>
+                                            <div class="btn_wrap">
+                                                <span class="btn06 move_btn">이동</span>
+                                                <span class="btn06 inquiry">조회</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sr_list_inner">
+                                    <div class="pin"></div>
+                                    <dl>
+                                        <dt><b>백두대간 보호지역</b><br>(Baekdudaegan Mountains Reserve)</dt>
+                                        <dd class="list_text">
+                                            <ul>
+                                                <li>유형 : 백두대간 보호지역</li>
+                                                <li>면적 : 육상 7,568km&sup2;·해양 3,411km&sup2;</li>
+                                            </ul>
+                                            <div class="btn_wrap">
+                                                <span class="btn06 move_btn">이동</span>
+                                                <span class="btn06 inquiry">조회</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sr_list_inner">
+                                    <div class="pin"></div>
+                                    <dl>
+                                        <dt><b>관악산(서울특별시 관악구 신림동 54,55,56-1,56-2,57-13,57-14,58-4,58-5)</b><br>(Gwanaksan (Seoul Gwanakgu Shllimdong))</dt>
+                                        <dd class="list_text">
+                                            <ul>
+                                                <li>유형 : 국립공원</li>
+                                                <li>면적 : 육상 7,568km&sup2;·해양 3,411km&sup2;</li>
+                                            </ul>
+                                            <div class="btn_wrap">
+                                                <span class="btn06 move_btn">이동</span>
+                                                <span class="btn06 inquiry">조회</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sr_list_inner">
+                                    <div class="pin"></div>
+                                    <dl>
+                                        <dt><b>설악산</b><br>(Seoraksan)</dt>
+                                        <dd class="list_text">
+                                            <ul>
+                                                <li>유형 : 국립공원</li>
+                                                <li>면적 : 육상 7,568km&sup2;·해양 3,411km&sup2;</li>
+                                            </ul>
+                                            <div class="btn_wrap">
+                                                <span class="btn06 move_btn">이동</span>
+                                                <span class="btn06 inquiry">조회</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sr_list_inner">
+                                    <div class="pin"></div>
+                                    <dl>
+                                        <dt><b>설악산</b><br>(Seoraksan)</dt>
+                                        <dd class="list_text">
+                                            <ul>
+                                                <li>유형 : 국립공원</li>
+                                                <li>면적 : 육상 7,568km&sup2;·해양 3,411km&sup2;</li>
+                                            </ul>
+                                            <div class="btn_wrap">
+                                                <span class="btn06 move_btn">이동</span>
+                                                <span class="btn06 inquiry">조회</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="paginate_wrap blind">
+                            <ul class="paginate">
+                                <li class="btn04 pre inactive"><span class="blind">이전</span>&lt;</li>
+                                <li class="btn04 active">1</li>
+                                <li class="btn04">2</li>
+                                <li class="btn04">3</li>
+                                <li class="btn04">4</li>
+                                <li class="btn04">5</li>
+                                <li class="btn04 next inactive"><span class="blind">다음</span>&gt;</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="btn fold_btn">패널접기</span>
+        <div id="container">
+            <div id="header">
+                <div class="header_top">
+                    <p>국가보호지역 통합DB관리 시스템</p>
+                    <ul class="top_menu">
+                        <li class="tm01"><a href="#">소개</a></li>
+                        <li class="tm02"><a href="#">사이트맵</a></li>
+                    </ul>
+                </div>
+                <div class="header_bottom">
+                    <span class="btn02 layer_btn">레이어 선택</span>
+                    <span class="btn02 file_down_btn">파일 다운로드</span>
+                    <ul class="admin_btns">
+                        <li class="btn01 data_btn">데이터 관리</li>
+                        <li class="btn01 member_btn">회원 관리</li>
+                        <li class="btn01 access_btn">접속 관리</li>
+                        <li class="btn01 sysup_btn">시스템 업로드</li>
+                        <li class="btn01 dataup_btn blind">데이터 업로드</li>
+                        <li class="btn01 login_btn blind">로그인</li>
+                        <li class="btn01 logout_btn">로그아웃</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="map">
+                <ul class="map_toolbar">
+                    <li class="btn03 mt01 active" title="일반">일반</li>
+                    <li class="btn03 mt02" title="위성">위성</li>
+                    <li class="btn03 mt03" title="확대">확대</li>
+                    <li class="btn03 mt04" title="축소">축소</li>
+                </ul>
+                <div class="map_view" style="height:974px; background:url(../img/map.png)"></div>
+            </div>
+            <div id="footer">
+                <ul class="gov_banners">
+                    <li><a href="#"><img src="../img/footer_logo01.png" alt="환경부"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo02.png" alt="국토교통부"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo03.png" alt="해양수산부"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo04.png" alt="산림청"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo05.png" alt="문화재청"></a></li>
+                </ul>
+                <p>ⓒ KOREA Database on Protected Areas 2016. All rights reserved</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

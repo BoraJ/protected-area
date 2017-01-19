@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>KDPA | 국가보호지역 통합DB관리 시스템</title>
+</head>
+<body>
+    <div id="wrap">              
+        <div id="aside">
+            <h1><a href="#"><img src="../img/logo.png" alt="KDPA(Korea Database on Protected Area) 국가보호지역 통합DB관리 시스템"></a></h1>
+            <ul class="menu">
+                <li class="btn01 menu01">상세검색</li>
+                <li class="btn01 menu02">통계분석</li>
+                <li class="btn01 menu03">시계열분석</li>
+            </ul>
+            <div id="aside_content" class="aside_content">
+               <div class="ac_main">
+                    <div class="top_info">
+                        <p>대한민국&nbsp;&nbsp; <span>1,516&nbsp; </span>개의 보호지역</p>
+                    </div>
+                    <div class="p_info">
+                        <div class="p_range">
+                            <p class="big_text">15,485 <span>km&sup2;</span></p>
+                            <p class="small_text">육상 10,087km&sup2; · 해양 5,398km&sup2;<br>총 16.3%</p>
+                        </div>
+                        <div class="p_pie">
+                            <div class="pie_land"><img src="../img/pie_land.png" alt=""></div>
+                            <div class="pie_sea"><img  src="../img/pie_sea.png" alt=""></div>
+                        </div>
+                        <div class="p_cal">
+                            <ul class="cal_land">
+                               <li>
+                                    <h4>중복지역 제외 면적</h4>
+                                    <p>10,087 km&sup2;</p>
+                                    <span>국토면적 대비 10.1%</span>
+                                </li>
+                                <li>
+                                    <h4>육상 산술합계</h4>
+                                    <p>13,606 km&sup2;</p>
+                                    <span>국토면적 대비 13.6%</span>
+                                </li>
+                                <li>
+                                    <h4>육상 중복면적</h4>
+                                    <p>3,591 km&sup2;</p>
+                                    <span>국토면적 대비 3.5%</span>
+                                </li>
+                            </ul>
+                            <ul class="cal_sea">
+                                <li>
+                                    <h4>중복지역 제외 면적</h4>
+                                    <p>5,398 km&sup2;</p>
+                                    <span>해양면적 대비 6.2%</span>
+                                </li>
+                                <li>
+                                    <h4>해양 산술합계</h4>
+                                    <p>5,926 km&sup2;</p>
+                                    <span>해양면적 대비 6.3%</span>
+                                </li>
+                                
+                                <li>
+                                    <h4>해양 중복면적</h4>
+                                    <p>528 km&sup2;</p>
+                                    <span>해양면적 대비 0.1%</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="btn fold_btn">패널접기</span>
+        <div id="container">
+            <div id="header">
+                <div class="header_top">
+                    <p>국가보호지역 통합DB관리 시스템</p>
+                    <ul class="top_menu">
+                        <li class="tm01"><a href="#">소개</a></li>
+                        <li class="tm02"><a href="#">사이트맵</a></li>
+                    </ul>
+                </div>
+                <div class="header_bottom">
+                    <span class="btn02 layer_btn">레이어 선택</span>
+                    <span class="btn02 file_down_btn">파일 다운로드</span>
+                    <ul class="admin_btns">
+                        <li class="btn01 data_btn">데이터 관리</li>
+                        <li class="btn01 member_btn">회원 관리</li>
+                        <li class="btn01 access_btn">접속 관리</li>
+                        <li class="btn01 sysup_btn">시스템 업로드</li>
+                        <li class="btn01 dataup_btn blind">데이터 업로드</li>
+                        <li class="btn01 login_btn blind">로그인</li>
+                        <li class="btn01 logout_btn">로그아웃</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+           
+            
+            <div class="pop dataup_pop" style="left:50%; margin-left:-400px; top:120px;">
+                <dl>
+                    <dt>
+                        <div class="tit">
+                            <h3>데이터 업로드</h3>
+                            <span class="close_btn" title="창닫기">창닫기</span>
+                            <span class="back_btn" title="뒤로가기">뒤로가기</span>
+                        </div>
+                    </dt>
+                    <dd class="pop_con">
+                        <div class="upload_table_wrap dataup">
+                            <table class="upload_table dataup" summary="담당자 데이터업로드 테이블입니다." cellpadding="0">
+                                <caption>담당자 데이터업로드 테이블입니다.</caption>
+                                <colgroup>
+                                    <col width="10%">
+                                    <col width="40%">
+                                    <col width="10%">
+                                    <col width="40%">
+                                </colgroup>
+                                <tbody>
+                                   <tr class="first_row">
+                                        <th>기관선택</th>
+                                        <td class="txt_l">
+                                            <select class="sel_organ">
+                                                <!--c:forEach items="${selectGov }" var="row">
+                                                    <option>${row.GOV }</option>
+                                                </c:forEach-->
+                                            </select>
+                                        </td>
+                                        <th>분기선택</th>
+                                        <td class="last txt_l">
+                                            <select class="sel_quarter">
+                                                <option>2017년 상반기</option>
+                                                <option>2017년 하반기</option>
+                                                <option>2018년 상반기</option>
+                                                <option>2018년 하반기</option>
+                                                <option>2019년 상반기</option>
+                                                <option>2019년 하반기</option>
+                                                <option>2020년 상반기</option>
+                                                <option>2020년 하반기</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr class="second_row">
+                                        <th>작성자</th>
+                                        <td class="txt_l">환경부</td>
+                                        <th>작성일</th>
+                                        <td class="last txt_l">2016-11-15</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th>유형</th>
+                                        <td colspan="3" class="last txt_l bo_type">
+                                            <div class="bo_type_btns">
+                                                <span class="btn09 bo_new active">보호지역 신규</span>
+                                                <span class="btn09 bo_del">보호지역 해제</span>
+                                                <span class="btn09 bo_chg">보호지역 변경</span>
+                                            </div>
+                                            <!-- 
+                                            <div class="bo_change">
+                                                <label><input type="radio" name="change" class="area change">면적 변경</label>
+                                                <label><input type="radio" name="change" class="prop change">속성 변경</label>
+                                                <label><input type="radio" name="change" class="areaprop change">면적/속성 변경 )</label>
+                                            </div>
+                                            -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>내역</th>
+                                        <td colspan="3" class="last txt_l bo_list">
+                                            <div class="stat_table_wrap bo_list">
+                                            <table class="stat_table dataup" summary="담당자 데이터업로드 리스트입니다." cellpadding="0">
+                                                <caption>담당자 데이터업로드 리스트</caption>
+                                                <colgroup>
+                                                    <col width="7%">
+                                                    <col width="%">
+                                                    <col width="20%">
+                                                    <col width="20%">
+                                                    <col width="10%">
+                                                    <col width="10%">
+                                                    <col width="8%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>번호</th>
+                                                        <th>보호지역 명칭</th>
+                                                        <th>보호지역 유형</th>
+                                                        <th>업무유형</th>
+                                                        <th>첨부파일</th>
+                                                        <th>입력정보</th>
+                                                        <th class="last">삭제</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody class="bo_list_up">
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>설악산<br>(Seoraksan)</td>
+                                                        <td class="table_tit">국립공원<br>(National Park)</td>
+                                                        <td>신규</td>
+                                                        <td class="file_down"><img src="../img/file_icon.png" alt="첨부파일" title="첨부파일 다운로드"></td>
+                                                        <td class="document"><img src="../img/document_icon.png" alt="입력정보" title="입력정보 보기"></td>
+                                                        <td class="delete last"><img src="../img/delete_icon.png" alt="삭제" title="삭제"></td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>  
+                                            <!--
+                                            <th>SHP파일</th><td class="txt_l"><form id="shp_form" name="shp_form" method = "post" enctype="multipart/form-data"><input type="file" id="shp_upload" name="shp_upload" multiple></form></td>
+                                            <th>엑셀파일</th><td class="last txt_l"><form id="excel_form" name="excel_form" method = "post" enctype="multipart/form-data"><input type="file" id="excel_upload" name="excel_upload" multiple></form></td>
+                                            -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataup_btns">
+                            <span class="btn08 du_cancel_btn">취소</span>
+                            <span class="btn08 du_request_btn">반영요청</span>
+                        </div>	
+                    </dd>
+                </dl>
+            </div>
+            
+            
+             <div class="pop dataup_pop download" style="left:50%; margin-left:420px; top:120px;">
+                <dl>
+                    <dt>
+                        <div class="tit">
+                            <h3>보호지역 신규</h3>
+                            <span class="close_btn" title="창닫기">창닫기</span>
+                        </div>
+                    </dt>
+                    <dd class="pop_con">
+                        <div class="stat_table_wrap download">
+                            <table class="stat_table download" summary="최신파일 다운로드 테이블 입니다." cellpadding="0">
+                                <caption>최신파일 다운로드 테이블</caption>
+                                <colgroup>
+                                    <col width="40%">
+                                    <col width="">
+                                </colgroup>
+                                <thead>
+                                    <tr><th>구분</th><th>입력</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="organ">명칭(국문)</td>
+                                        <td><input type="text" value="" id="orig_name"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="organ">명칭(영문)</td>
+                                        <td><input type="text" value="" id="name"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="organ">유형(국문)</td>
+                                        <td>
+                                            <select id="desig">
+                                                <option value="">선택</option>
+                                                <!--c:forEach items="${ selectDesig}" var="row">
+                                                    <option value="${row.DESIG }">${row.DESIG }</option>
+                                                </c:forEach-->
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="organ">육상/해양 구분</td>
+                                        <td>
+                                             <select>
+                                                <option value="">선택</option>
+                                                <option value="">육상</option>
+                                                <option value="">해양</option>
+                                                <option value="">혼합</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="organ">공시면적(육상)</td>
+                                        <td><input type="text" value="" id="rep_area"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="organ">공시면적(해양)</td>
+                                        <td><input type="text" value="" id="rep_m_area"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="organ">GIS면적(육상)</td>
+                                        <td><input type="text" value="" id="gis_area"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="organ">GIS면적(해양)</td>
+                                        <td><input type="text" value="" id="gis_m_area"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="organ">지정연도</td>
+                                        <td><input type="text" value="" id="status_yr"></td>
+                                    </tr>
+                               
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <tr>
+                                        <td class="organ">관리유형</td>
+                                        <td>
+                                            <select id="gov_type">
+                                                <option value="">선택</option>
+                                                <option value="Federal or national ministry or agency">중앙정부</option>
+                                                <option value="Sub-national ministry or agency">지방정부</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="organ">
+                                            위치<br>
+                                            <span class="comment">※ <b>ctrl+클릭</b>시 <br>지역의 다중선택이 가능합니다.</span>
+                                        </td>
+                                        <td class="last">
+                                            <select id="sub_loc" multiple="multiple" class="location">
+                                                <option value="KR-11">서울특별시</option>
+                                                <option value="KR-26">부산광역시</option>
+                                                <option value="KR-27">대구광역시</option>
+                                                <option value="KR-28">인천광역시</option>
+                                                <option value="KR-29">광주광역시</option>
+                                                <option value="KR-30">대전광역시</option>
+                                                <option value="KR-31">울산광역시</option>
+                                                <option value="KR-50">세종특별자치시</option>
+                                                <option value="KR-41">경기도</option>
+                                                <option value="KR-42">강원도</option>
+                                                <option value="KR-43">충청북도</option>
+                                                <option value="KR-44">충청남도</option>
+                                                <option value="KR-45">전라북도</option>
+                                                <option value="KR-46">전라남도</option>
+                                                <option value="KR-47">경상북도</option>
+                                                <option value="KR-48">경상남도</option>
+                                                <option value="KR-49">제주특별자치도</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="organ">SHP 파일</td>
+                                        <td class="">
+                                            <form id="shp_form" name="shp_form" method = "post" enctype="multipart/form-data">
+                                                <input type="file" id="shp_upload" name="shp_upload" multiple>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="empty_cell">
+                                            ※ 구역 변경 시 SHP파일 등록해주세요.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="organ">SHP 파일</td>
+                                        <td class="">
+                                            <form id="shp_form" name="shp_form" method = "post" enctype="multipart/form-data">
+                                                <input type="file" id="shp_upload" name="shp_upload" multiple>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataup_btns">
+                            <span class="btn08 du_cancel_btn">취소</span>
+                            <span class="btn08 bo_new_sel_btn">등록</span>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            
+            
+
+            <div id="map">
+                <ul class="map_toolbar">
+                    <li class="btn03 mt01 active" title="일반">일반</li>
+                    <li class="btn03 mt02" title="위성">위성</li>
+                    <li class="btn03 mt03" title="확대">확대</li>
+                    <li class="btn03 mt04" title="축소">축소</li>
+                    <li class="btn03 mt05" title="캡쳐">캡쳐</li>
+                    <li class="btn03 mt06" title="인쇄">인쇄</li>
+                    
+                    <li class="capture_label">
+                        <span>x 0.5</span>
+                        <span class="active">x 1.0</span>
+                        <span>x 2.0</span>
+                        <span>x 3.0</span>
+                    </li>
+                </ul>
+               
+                <div class="map_view" style="height:974px; background:url(../img/map.png)"></div>
+            </div>
+            <div id="footer">
+                <ul class="gov_banners">
+                    <li><a href="#"><img src="../img/footer_logo01.png" alt="환경부"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo02.png" alt="국토교통부"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo03.png" alt="해양수산부"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo04.png" alt="산림청"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo05.png" alt="문화재청"></a></li>
+                </ul>
+                <p>ⓒ KOREA Database on Protected Areas 2016. All rights reserved</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

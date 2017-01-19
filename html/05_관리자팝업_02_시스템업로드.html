@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>KDPA | 국가보호지역 통합DB관리 시스템</title>
+</head>
+<body>
+    <div id="wrap">              
+        <div id="aside">
+            <h1><a href="#"><img src="../img/logo.png" alt="KDPA(Korea Database on Protected Area) 국가보호지역 통합DB관리 시스템"></a></h1>
+            <ul class="menu">
+                <li class="btn01 menu01">상세검색</li>
+                <li class="btn01 menu02">통계분석</li>
+                <li class="btn01 menu03">시계열분석</li>
+            </ul>
+            <div id="aside_content" class="aside_content">
+               <div class="ac_main">
+                    <div class="top_info">
+                        <p>대한민국&nbsp;&nbsp; <span>1,516&nbsp; </span>개의 보호지역</p>
+                    </div>
+                    <div class="p_info">
+                        <div class="p_range">
+                            <p class="big_text">15,485 <span>km&sup2;</span></p>
+                            <p class="small_text">육상 10,087km&sup2; · 해양 5,398km&sup2;<br>총 16.3%</p>
+                        </div>
+                        <div class="p_pie">
+                            <div class="pie_land"><img src="../img/pie_land.png" alt=""></div>
+                            <div class="pie_sea"><img  src="../img/pie_sea.png" alt=""></div>
+                        </div>
+                        <div class="p_cal">
+                            <ul class="cal_land">
+                               <li>
+                                    <h4>중복지역 제외 면적</h4>
+                                    <p>10,087 km&sup2;</p>
+                                    <span>국토면적 대비 10.1%</span>
+                                </li>
+                                <li>
+                                    <h4>육상 산술합계</h4>
+                                    <p>13,606 km&sup2;</p>
+                                    <span>국토면적 대비 13.6%</span>
+                                </li>
+                                <li>
+                                    <h4>육상 중복면적</h4>
+                                    <p>3,591 km&sup2;</p>
+                                    <span>국토면적 대비 3.5%</span>
+                                </li>
+                            </ul>
+                            <ul class="cal_sea">
+                                <li>
+                                    <h4>중복지역 제외 면적</h4>
+                                    <p>5,398 km&sup2;</p>
+                                    <span>해양면적 대비 6.2%</span>
+                                </li>
+                                <li>
+                                    <h4>해양 산술합계</h4>
+                                    <p>5,926 km&sup2;</p>
+                                    <span>해양면적 대비 6.3%</span>
+                                </li>
+                                
+                                <li>
+                                    <h4>해양 중복면적</h4>
+                                    <p>528 km&sup2;</p>
+                                    <span>해양면적 대비 0.1%</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="btn fold_btn">패널접기</span>
+        <div id="container">
+            <div id="header">
+                <div class="header_top">
+                    <p>국가보호지역 통합DB관리 시스템</p>
+                    <ul class="top_menu">
+                        <li class="tm01"><a href="#">소개</a></li>
+                        <li class="tm02"><a href="#">사이트맵</a></li>
+                    </ul>
+                </div>
+                <div class="header_bottom">
+                    <span class="btn02 layer_btn">레이어 선택</span>
+                    <span class="btn02 file_down_btn">파일 다운로드</span>
+                    <ul class="admin_btns">
+                        <li class="btn01 data_btn">데이터 관리</li>
+                        <li class="btn01 member_btn">회원 관리</li>
+                        <li class="btn01 access_btn">접속 관리</li>
+                        <li class="btn01 sysup_btn">시스템 업로드</li>
+                        <li class="btn01 dataup_btn blind">데이터 업로드</li>
+                        <li class="btn01 login_btn blind">로그인</li>
+                        <li class="btn01 logout_btn">로그아웃</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+           
+            
+            <div class="pop dataup_pop" style="left:50%; margin-left:-720px; top:160px;">
+                <dl>
+                    <dt>
+                        <div class="tit">
+                            <h3>시스템 업로드</h3>
+                            <span class="close_btn" title="창닫기">창닫기</span>
+                        </div>
+                    </dt>
+                    <dd class="pop_con">
+                        
+                        <div class="stat_table_wrap sysup">
+                            <table class="stat_table sysup" summary="관리자 시스템업로드 관리창 테이블입니다." cellpadding="0">
+                                <caption>관리자 시스템업로드 관리창 테이블</caption>
+                                <colgroup>
+                                    <col width="5%">
+                                    <col width="5%">
+                                    <col width="15%">
+                                    <col width="">
+                                    <col width="24%">
+                                    <col width="10%">
+
+                                </colgroup>
+                                <thead>
+                                    <tr><th><input type="checkbox"></th><th>번호</th><th>분기</th><th>버전명</th><th>메타정보</th><th>첨부파일</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>1</td><td>2016년 상반기</td>
+                                        <td class="table_tit">보호지역 데이터 버전명입니다.</td>
+                                        <td><span class="btn06 su_meta_btn">메타정보입력</span>
+                                        <span class="btn06 su_info_btn">정보보기</span></td>
+                                        <td class="file_down sysup"><img src="../img/file_icon.png" alt="첨부파일" title="첨부파일 다운로드"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>1</td><td>2016년 상반기</td>
+                                        <td class="table_tit">보호지역 데이터 버전명입니다.</td>
+                                        <td><span class="btn06 su_meta_btn">메타정보입력</span>
+                                        <span class="btn06 su_info_btn">정보보기</span></td>
+                                        <td class="file_down sysup"><img src="../img/file_icon.png" alt="첨부파일" title="첨부파일 다운로드"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>1</td><td>2016년 상반기</td>
+                                        <td class="table_tit">보호지역 데이터 버전명입니다.</td>
+                                        <td><span class="btn06 su_meta_btn">메타정보입력</span>
+                                        <span class="btn06 su_info_btn">정보보기</span></td>
+                                        <td class="file_down sysup"><img src="../img/file_icon.png" alt="첨부파일" title="첨부파일 다운로드"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>1</td><td>2016년 상반기</td>
+                                        <td class="table_tit">보호지역 데이터 버전명입니다.</td>
+                                        <td><span class="btn06 su_meta_btn">메타정보입력</span>
+                                        <span class="btn06 su_info_btn">정보보기</span></td>
+                                        <td class="file_down sysup"><img src="../img/file_icon.png" alt="첨부파일" title="첨부파일 다운로드"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>1</td><td>2016년 상반기</td>
+                                        <td class="table_tit">보호지역 데이터 버전명입니다.</td>
+                                        <td><span class="btn06 su_meta_btn">메타정보입력</span>
+                                        <span class="btn06 su_info_btn">정보보기</span></td>
+                                        <td class="file_down sysup"><img src="../img/file_icon.png" alt="첨부파일" title="첨부파일 다운로드"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>1</td><td>2016년 상반기</td>
+                                        <td class="table_tit">보호지역 데이터 버전명입니다.</td>
+                                        <td><span class="btn06 su_meta_btn">메타정보입력</span>
+                                        <span class="btn06 su_info_btn">정보보기</span></td>
+                                        <td class="file_down sysup"><img src="../img/file_icon.png" alt="첨부파일" title="첨부파일 다운로드"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>1</td><td>2016년 상반기</td>
+                                        <td class="table_tit">보호지역 데이터 버전명입니다.</td>
+                                        <td><span class="btn06 su_meta_btn">메타정보입력</span>
+                                        <span class="btn06 su_info_btn">정보보기</span></td>
+                                        <td class="file_down sysup"><img src="../img/file_icon.png" alt="첨부파일" title="첨부파일 다운로드"></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="dataup_btns">
+                            <span class="btn08 su_delet_btn">삭제</span>
+                            <span class="btn08 su_down_btn">다운로드</span>
+                            <span class="btn08 su_sysup_btn">시스템 업로드</span>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            
+            
+            
+            
+            <div class="pop dataup_pop" style="left:50%; margin-left:100px; top:160px;">
+                <dl>
+                    <dt>
+                        <div class="tit">
+                            <h3>시스템 업로드</h3>
+                            <span class="close_btn" title="창닫기">창닫기</span>
+                            <span class="back_btn" title="뒤로가기">뒤로가기</span>
+                        </div>
+                    </dt>
+                    <dd class="pop_con">
+                        <div class="upload_table_wrap sysup">
+                            <table class="upload_table sysup" summary="관리자 시스템업로드 테이블입니다." cellpadding="0">
+                                <caption>관리자 시스템업로드 테이블</caption>
+                                <colgroup>
+                                    <col width="10%">
+                                    <col width="40%">
+                                    <col width="10%">
+                                    <col width="40%">
+                                </colgroup>
+
+                                <tbody>
+                                   <tr class="first_row">
+                                        
+                                        <th>분기선택</th>
+                                        <td colspan="3" class="last txt_l">
+                                            <select class="sel_quarter sys">
+                                                <option>2016년 하반기</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr><th>버전명</th><td colspan="3" class="last"><textarea class="text_insert sys"></textarea></td></tr>
+                                    <tr>
+                                        <th>포맷</th><td class="txt_l">SHP</td>
+                                        <th>좌표체계</th><td class="last txt_l">WGS 1984</td>
+                                    </tr>
+                                    <tr>
+                                        <th>첨부파일</th><td colspan="3" class="last txt_l"><input type="file"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataup_btns">
+                            <span class="btn08 su_cancel_btn">취소</span>
+                            <span class="btn08 su_check_btn">검사</span>
+                        </div>
+                        
+                        <div class="validity sysup">
+                            <p>담당자님께서 올리신 <span>2016_하_해양수산부_보호자료.xlsx</span>에 대한 유효성 검사 결과입니다.</p>
+                            <dl class="validity_check sysup">
+                                <dt>총 52개의 데이터 중 4개의 데이터 오류</dt>
+                                <dd>
+                                    <ul>
+                                        <li>1번째 데이터:NAME 필드 데이터 타입 오류</li>
+                                        <li>4번째 데이터:NAME 필드 데이터 타입 오류</li>
+                                        <li>19번째 데이터:NAME 필드 데이터 타입 오류</li>
+                                        <li>22번째 데이터:NAME 필드 데이터 타입 오류</li>
+                                        <li>1번째 데이터:NAME 필드 데이터 타입 오류</li>
+                                        
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <div class="dataup_btns">
+                                <span class="btn08 su_cancel_btn">취소</span>
+                                <span class="btn08 su_add_btn">시스템 업로드</span>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            
+            
+            
+            
+            <div id="map">
+                <ul class="map_toolbar">
+                    <li class="btn03 mt01 active" title="일반">일반</li>
+                    <li class="btn03 mt02" title="위성">위성</li>
+                    <li class="btn03 mt03" title="확대">확대</li>
+                    <li class="btn03 mt04" title="축소">축소</li>
+                    <li class="btn03 mt05" title="캡쳐">캡쳐</li>
+                    <li class="btn03 mt06" title="인쇄">인쇄</li>
+                </ul>
+                <div class="map_view" style="height:974px; background:url(../img/map.png)"></div>
+            </div>
+            <div id="footer">
+                <ul class="gov_banners">
+                    <li><a href="#"><img src="../img/footer_logo01.png" alt="환경부"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo02.png" alt="국토교통부"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo03.png" alt="해양수산부"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo04.png" alt="산림청"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo05.png" alt="문화재청"></a></li>
+                </ul>
+                <p>ⓒ KOREA Database on Protected Areas 2016. All rights reserved</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

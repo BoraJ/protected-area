@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>KDPA | 국가보호지역 통합DB관리 시스템</title>
+</head>
+<body>
+    <div id="wrap">              
+        <div id="aside">
+            <h1><a href="#"><img src="../img/logo.png" alt="KDPA(Korea Database on Protected Area) 국가보호지역 통합DB관리 시스템"></a></h1>
+            <ul class="menu">
+                <li class="btn01 menu01">상세검색</li>
+                <li class="btn01 menu02">통계분석</li>
+                <li class="btn01 menu03 active">시계열분석</li>
+            </ul>
+            <div id="aside_content" class="aside_content">
+                <div class="ac_menu03">
+                    <div class="time_menu_wrap">
+                        <div class="time_menu tm_01 active">
+                            <h5>지정연도별 <span class="l_fold_btn"></span></h5>
+                            
+                            <div class="tm_con tm_con01">
+                                range slider
+                            </div>
+                        </div>
+                        <div class="time_menu tm_02">
+                            <h5>지정연도별 누계 <span class="l_fold_btn fold"></span></h5>
+                            <div class="tm_con tm_con02 blind">
+                                range slider
+                            </div>
+                        </div> 
+                        <div class="time_menu tm_03">
+                            <h5>WDPA 등재버전별 <span class="l_fold_btn fold"></span></h5>
+                            <div class="tm_con tm_con03 blind">
+                                <label><input type="radio" name="wdpa_year">2009년</label><br/>
+                                <label><input type="radio" name="wdpa_year">2012년</label><br/>
+                                <label><input type="radio" name="wdpa_year">2014년</label><br/>
+                                <label><input type="radio" name="wdpa_year">2016년</label>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="btn fold_btn">패널접기</span>
+        <div id="container">
+            <div id="header">
+                <div class="header_top">
+                    <p>국가보호지역 통합DB관리 시스템</p>
+                    <ul class="top_menu">
+                        <li class="tm01"><a href="#">소개</a></li>
+                        <li class="tm02"><a href="#">사이트맵</a></li>
+                    </ul>
+                </div>
+                <div class="header_bottom">
+                    <span class="btn02 layer_btn">레이어 선택</span>
+                    <span class="btn02 file_down_btn">파일 다운로드</span>
+                    <ul class="admin_btns">
+                        <li class="btn01 data_btn">데이터 관리</li>
+                        <li class="btn01 member_btn">회원 관리</li>
+                        <li class="btn01 access_btn">접속 관리</li>
+                        <li class="btn01 sysup_btn">시스템 업로드</li>
+                        <li class="btn01 dataup_btn blind">데이터 업로드</li>
+                        <li class="btn01 login_btn blind">로그인</li>
+                        <li class="btn01 logout_btn">로그아웃</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="map">
+                <ul class="map_toolbar">
+                    <li class="btn03 mt01 active" title="일반">일반</li>
+                    <li class="btn03 mt02" title="위성">위성</li>
+                    <li class="btn03 mt03" title="확대">확대</li>
+                    <li class="btn03 mt04" title="축소">축소</li>
+                </ul>
+                <div class="map_view" style="height:974px; background:url(../img/map.png)"></div>
+            </div>
+            <div id="footer">
+                <ul class="gov_banners">
+                    <li><a href="#"><img src="../img/footer_logo01.png" alt="환경부"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo02.png" alt="국토교통부"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo03.png" alt="해양수산부"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo04.png" alt="산림청"></a></li>
+                    <li><a href="#"><img src="../img/footer_logo05.png" alt="문화재청"></a></li>
+                </ul>
+                <p>ⓒ KOREA Database on Protected Areas 2016. All rights reserved</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
